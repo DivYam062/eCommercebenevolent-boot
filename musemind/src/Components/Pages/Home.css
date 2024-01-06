@@ -3,44 +3,77 @@
     padding: 0;
 }
 
-.bannerDiv{
+.banner{
     position: relative;
     width: 100%;
     height: 600px;
-    background-image: url();
+    background-image: url('../../Images/bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.banner{
+.banner-content{
     position: absolute;
-    top: 30%;
-    left: 18%;
+    top: 20%;
+    left: 13%;
     /* transform: translate(-50%, -50%); */
     text-align: left;
-    border:  1px solid black;
 }
 
-.banner h3 {
-    font-size: 2.5em;
+.banner h1 {
+    font-size: 60px;
+    color: rgb(0,61,41);
     margin-bottom: 10px;
 }
 
 .banner p {
     font-size: 1.2em;
+    color: rgb(0,61,41);
     margin-bottom: 20px;
 }
 
 .banner button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #2196F3;
+    background-color: rgb(0,61,41);
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 20px;
 }
 
 .banner button:hover {
-    background-color: #0b7dda;
+    background-color: rgb(0, 123, 82);
+}
+
+.top-category{
+    margin: 50px 10%;
+}
+
+.category{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 30px;
+    height: 250px;
+}
+
+.top-category h1{
+    text-align: left;
+}
+
+.category div{
+    border: none;
+    height: 250px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.img-cat h3{
+    color: white;
+}
+
+.img-cat:hover{
+    transform: scale(1.1);
 }

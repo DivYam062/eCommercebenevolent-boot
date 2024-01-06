@@ -38,32 +38,32 @@ const Navbar = () => {
                         <div className="dropdown-content">
                             <h3>Popular Categories</h3>
                             <div className="dropdownInner">
-                            <Link to="/furniture" className="a">
+                            <Link to="/products/furniture" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec6052dc39b839500c1f8a_Rectangle%201436.png" alt="" /> Furniture
                                 </div>
                             </Link>
-                            <Link to="/handbag" className="a">
+                            <Link to="/products/handbag" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec605386e48004f02ee6a8_Rectangle%201436-4.png" alt="" /> Hand Bag
                                 </div>
                             </Link>
-                            <Link to="/shoe" className="a">
+                            <Link to="/products/shoe" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec6052f0ed215b864af96e_Rectangle%201436-1.png" alt="" /> Shoe
                                 </div>
                             </Link>
-                            <Link to="/headphones" className="a">
+                            <Link to="/products/headphones" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec6053e5b15cfafd550cbb_Rectangle%201436-3.png" alt="" /> Head Phones
                                 </div>
                             </Link>
-                            <Link to="/laptop" className="a">
+                            <Link to="/products/laptop" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec6052f3741a4f87af0f6d_Rectangle%201436-2.png" alt="" /> Laptop
                                 </div>    
                             </Link>
-                            <Link to="/books" className="a">
+                            <Link to="/products/books" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec622235f3f730c0de8c3f_Rectangle%201436-5.png" alt="" /> Books
                                 </div>
@@ -87,6 +87,8 @@ const Navbar = () => {
                         <img className="icon" src={Cart_Icon} alt="cart_icon" />
                         <h3>Cart</h3>
                     </div>
+
+
                 </div>
             </div>
         </div>
