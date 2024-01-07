@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
-    <link rel="icon" href="https://i.ibb.co/1d9BGZK/download-1-removebg-preview.jpg" >
+    <title>Login</title>
+    
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -42,16 +42,16 @@
       <div class="container py-5 h-100">
         <div
           class="row d-flex justify-content-center align-items-center h-100"
-          id="signupbox"
+          id="loginbox"
         >
           <div class="col col-xl-10">
             <div class="card" style="border-radius: 1rem">
               <div class="row g-0">
                 <div class="col-md-6 col-lg-5 d-none d-md-block">
-                    <video width="300" height="900" controls>
-                        <source src="https://cdn.dribbble.com/uploads/48292/original/30fd1f7b63806eff4db0d4276eb1ac45.mp4?1689187515" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                  <video width="400" height="500" controls>
+                    <source src="https://cdn.dribbble.com/uploads/48226/original/b8bd4e4273cceae2889d9d259b04f732.mp4?1689028949" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 </div>
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                   <div class="card-body p-4 p-lg-5 text-black">
@@ -60,19 +60,8 @@
                         class="fw-normal mb-3 pb-3"
                         style="letter-spacing: 1px"
                       >
-                        Sign up to your account
+                        Login
                       </h5>
-
-                      <div class="form-outline mb-4">
-                        <input
-                          type="text"
-                          id="name"
-                          class="form-control form-control-lg"
-                        />
-                        <label class="form-label" for="form2Example17"
-                          >Name</label
-                        >
-                      </div>
 
                       <div class="form-outline mb-4">
                         <input
@@ -100,23 +89,25 @@
                         <button
                           class="btn btn-lg btn-block btn-primary"
                           type="submit"
-                          id="signupbtn"
+                          id="signinbtn"
                         >
-                          Sign up
+                          Sign in
                         </button>
                         <button
                           class="btn btn-lg btn-block btn-primary"
                           type="submit"
                           id="googlebtn"
                         >
-                          Sign up with google
+                          Sign in with google
                         </button>
                       </div>
 
                       <a class="small text-muted" href="#!">Forgot password?</a>
                       <p class="mb-5 pb-lg-2" style="color: #393f81">
-                        Have an account?
-                        <a href="./login.html" style="color: #393f81">Login</a>
+                        Don't have an account?
+                        <a href="./Signup.html" style="color: #393f81"
+                          >Sign up</a
+                        >
                       </p>
                       <a href="#!" class="small text-muted">Terms of use.</a>
                       <a href="#!" class="small text-muted">Privacy policy</a>
@@ -136,22 +127,22 @@
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
 ></script>
+<script src="./components/loginIMPORT.js" type="module"></script>
 
-<script type="module" src="./components/loginIMPORT.js"></script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
   import {
     getAuth,
-    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
   import {
     getDatabase,
     ref,
-    set,
+    onValue,
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
   const firebaseConfig = {
     apiKey: "AIzaSyAGpHrB0sm21lPXpz4OtoSKWVLFb-jisb8",
     authDomain: "glossier-eba28.firebaseapp.com",
@@ -161,78 +152,76 @@
     appId: "1:79396284003:web:e7b409f936564e49b6fa56",
     measurementId: "G-G7STPRSJ5S",
   };
-
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   const database = getDatabase();
 
-  const signUpButton = document.getElementById("signupbtn");
+  const signInButton = document.getElementById("signinbtn");
   let spinner = document.getElementById("spinner");
 
-  signUpButton.addEventListener("click", function () {
+  signInButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("form2Example17");
     const passwordInput = document.getElementById("form2Example27");
-    const name = nameInput.value;
     const email = emailInput.value;
     const password = passwordInput.value;
-    if (!name || !email || !password) {
+
+    if (!email || !password) {
       document.querySelector("#alert-msg").textContent =
-          "Please fill all the required details!";
+        "Please fill all the required details!";
       document.querySelector("#alert-container").style.display = "block";
-      return; // Exit the function if fields are not filled
+
+      return;
     }
+
     spinner.style.display = "block";
-    createUserWithEmailAndPassword(auth, email, password)
+
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        let userId = user.uid;
-        let [firstName, lastName] = name.split(" ");
+        const userId = user.uid;
+        const starCountRef = ref(database, "users/" + userId);
+        onValue(starCountRef, (snapshot) => {
+          const data = snapshot.val();
+          let [firstName, lastName] = data.username.split(" ");
 
         localStorage.setItem("userName", firstName);
-        set(ref(database, "users/" + userId), { 
-          username: name,
-          email: email,
-        }).then(function () {
+          // localStorage.setItem("userName", data.username);
           window.location.assign("./index.html");
         });
       })
       .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
         spinner.style.display = "none";
 
         document.querySelector("#alert-msg").textContent =
-          "Account already registered";
+          "Entered wrong details";
         document.querySelector("#alert-container").style.display = "block";
-
-        const errorMessage = error.message;
-        console.log(errorMessage);
+        console.log(error);
       });
   });
-
 
   let googlebtn = document.getElementById("googlebtn");
   googlebtn.addEventListener("click", (event) => {
     event.preventDefault();
+
     signInWithPopup(auth, provider)
       .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
         const user = result.user;
+
         let [firstName, lastName] = user.displayName.split(" ");
-        spinner.style.display = "block";
 
         localStorage.setItem("userName", firstName);
         window.location.assign("./index.html");
       })
       .catch((error) => {
-        spinner.style.display = "none";
-
-       
-       
+        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+        console.log(error);
       });
   });
 
