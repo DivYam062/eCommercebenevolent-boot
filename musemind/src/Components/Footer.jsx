@@ -3,7 +3,7 @@ import "./Footer.css";
 export const Footer = () => {
 
     return (
-        <div>
+        <div className="footer">
             <hr style={{height:"1px", marginTop:"100px"}}/>
                 <div style={{marginTop:"50px"}}>
                     <div className="flexBox">
@@ -24,6 +24,7 @@ export const Footer = () => {
                                 </div>
                             </div>
                         </div>
+                        <div>
                         <div className="listbox">
                             <div>
                                 <h2>Department</h2>
@@ -77,6 +78,7 @@ export const Footer = () => {
                                 <p className="listitem">feedback</p>
                                 <p className="listitem">Security &amp;Fraud</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
