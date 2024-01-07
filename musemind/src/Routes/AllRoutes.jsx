@@ -1,6 +1,6 @@
 import {Routes,Route} from "react-router-dom";
-import Home from "../Components/Pages/Home";
-import Login from "../Components/Pages/Login";
+import Home from "../Pages/Home";
+import Login from "../Pages/Login";
 
 const AllRoutes = ()=>{
     return (
