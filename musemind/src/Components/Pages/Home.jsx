@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { datafetch, postdata } from "../../Redux/homeReducer/action";
 
 const Home = ()=>{
 
-    const [products,setProduct] = useState([]);
+    let dispatch = useDispatch();
+    let products = useSelector((store)=>store.HomeReducer.product);
+    let loading = useSelector((store)=>store.HomeReducer.loading);
 
-    const fetchData = async () => {
-        try{
-            const res = await fetch("https://products-3jez.onrender.com/product?_page=1&_limit=8");
-            const data = await res.json();
-            console.log(data);
-            setProduct(data);
-        }
-        catch(error){
-            console.log(error);
-        }
-    }
-
-    useEffect(()=>{
-        fetchData();
-    },[]);
+    useEffect(() => {
+        datafetch(dispatch);
+    }, [])
 
     return (
         <div className="homePage">
@@ -47,18 +39,22 @@ const Home = ()=>{
             {/* Top Deals */}
             <div className="topdeal">
                 <h1>Todays Best Deals for you!</h1>
-                <div className="itemgrid">
-                        {products?.map((product)=>(
-                        <div key={product.id} className="itembox">
-                            <img src={product.image} alt={product.title} />
-                            <div>
-                                <h2>{product.title}</h2>
-                                <h2>{product.price}</h2>
+                <div>
+                    {loading?("loading...."):(
+                        <div className="itemgrid">
+                            {products?.map((product)=>(
+                                <div key={product.id} className="itembox">
+                                <img src={product.image} alt={product.title} />
+                                <div>
+                                    <h2>{product.title}</h2>
+                                    <h2 style={{color:"green"}}>${product.price}</h2>
+                                </div>
+                                <p className="description">{product.description}</p>
+                                <button>Add to Cart</button>
                             </div>
-                            <p className="description">{product.description}</p>
-                            <button>Add to Cart</button>
+                            ))}
                         </div>
-                    ))}
+                    )}
                 </div>
             </div>
             {/* Choose your brand */}
@@ -170,12 +166,65 @@ const Home = ()=>{
                     </div>
                 </div>
             </div>
-
+            
+            {/* mid Banner */}
             <div className="midBanner">
                 <div id="middlebox">
                     <h1>Get 5% Cash Back On $200</h1>
                     <p>Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.</p>
                     <button>Learn More</button>
+                </div>
+            </div>
+            
+            {/* trending */}
+            <div className="trending">
+                <h1>Trending Deals for you!</h1>
+                <div className="itemgrid2">
+                    {products?.map((product)=>(
+                        <div key={product.id} className="itembox2">
+                            <img src={product.image} alt={product.title} />
+                            <div>
+                                <h2>{product.title}</h2>
+                                <h3 style={{color:"green"}}>${product.price}</h3>
+                            </div>
+                            <p className="description">{product.description}</p>
+                            <button>Add to Cart</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* services */}
+            <div className="services">
+                <h1>Services To Help You Shop</h1>
+                <div className="discountgrid2">
+                    <div className="discountbox2">
+                        <div style={{backgroundColor:"rgb(245,246,246)"}}>
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Updates on safe Shopping in our Stores</p>
+                        </div>
+                        <div>
+                            <img className="discountimg" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e55b939fea169c0292_faq-min.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="discountbox2">
+                        <div style={{backgroundColor:"rgb(245,246,246)"}}>
+                            <h2>Online Payment Process</h2>
+                            <p>Updates on safe Shopping in our Stores</p>
+                        </div>
+                        <div>
+                            <img className="discountimg" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e6707380718425e697_onlie%20payment-min.png" alt="" />
+                        </div>
+                    </div>
+                    <div className="discountbox2">
+                        <div style={{backgroundColor:"rgb(245,246,246)"}}>
+                            <h2>Home Delivery Options</h2>
+                            <p>Updates on safe Shopping in our Stores</p>
+                        </div>
+                        <div>
+                            <img className="discountimg" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e544663ba3d0fd2bb8_home%20delivery-min.png" alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
