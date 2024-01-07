@@ -253,11 +253,12 @@
     width: 80%;
     margin: auto;
     overflow: hidden;
-    margin-top: 50px;
-    margin-bottom: 50px;
+   
 }
 
 .itembox2 {
+    border: 1px solid #c2b193;
+    border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -265,11 +266,7 @@
     height: 500px;
     align-items: left;
     justify-content: space-between;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    align-items: center;
+   
 }
 
 .itembox2 img:hover{
