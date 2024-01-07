@@ -77,7 +77,7 @@ export const Login = () => {
   }
 
   if (isAuth) {
-    navigate("/SignUp")
+    navigate("/")
   }
 
 
