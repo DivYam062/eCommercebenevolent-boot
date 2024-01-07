@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { datafetch, postdata } from "../../Redux/homeReducer/action";
 
+
 const Home = ()=>{
 
     let dispatch = useDispatch();
@@ -13,7 +14,8 @@ const Home = ()=>{
     useEffect(() => {
         datafetch(dispatch);
     }, [])
-
+    
+    
     return (
         <div className="homePage">
             {/* Main banner */}
