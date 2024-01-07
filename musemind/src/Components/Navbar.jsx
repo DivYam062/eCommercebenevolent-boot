@@ -77,7 +77,7 @@ const Navbar = () => {
                     <h4 className="content">What's New</h4>
                     <h4 className="content">Delivery</h4>
                 </div>
-                <input className="searchBar" type="text" placeholder="Search..." />
+                <input className="searchBar" type="text" placeholder="     S e a r c h    P r o d u c t s ..." />
                 <div className="end">
                     <div className="inner" onClick={() => navigate('/login')}>
                         <img className="icon" src={Contact_Icon} alt="contact_icon" />
