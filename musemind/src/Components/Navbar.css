@@ -72,6 +72,7 @@
 .dropdownInner{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    margin: 20px;
 }
 
 .dropdown-content h3{
@@ -112,92 +113,33 @@
 .icon{
     height: 25px;
 }
-/* #parentNav{
-    margin: 0;
-    padding: 0;
+
+@media only screen and (max-width: 850px) {
+    .upperNav{
+        display: none;
+    }
+    .dropdown-content{
+        left: -100px;
+    }
+    .searchBar{
+        display: none;
+    }
+    .inner h3{
+        display: none;
+    }
 }
 
-.upperNav{
-    display: flex;
-    justify-content: space-around;
-    height: 30px;
-    background-color: darkgreen;
+@media only screen and (max-width: 500px) {
+    .upperNav{
+        display: none;
+    }
+    .searchBar{
+        display: none;
+    }
+    .inner h3{
+        display: none;
+    }
+    .middle{
+        display: none;
+    }
 }
-
-.upperNav p {
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-
-.upperNav select{
-    border: 0px solid darkgreen;
-    background-color: transparent;
-    color: white;
-}
-.upperNav option{
-    color: black;
-}
-
-.lowerNav{
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0px 0px 5px gray;
-}
-.lowerNav>div{
-    display: flex;
-    gap: 30px;
-}
-.lowerNav select{
-    border: transparent;
-    background-color: transparent;
-}
-.lowerNav img{
-    padding: 10px 0;
-}
-.lowerNav input{
-    margin: 14px 0px;
-    border-radius: 30px;
-    width: 300px;
-}
-.icon{
-    height: 25px;
-}
-.info div{
-    display: flex;
-    align-items: center;
-}
-.dropbtn {
-    font-size: 1.2em;
-    color: #333;
-    cursor: pointer;
-    
-}
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-.dropdown-content a{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-.dropdown-content :hover {
-    background-color: #f1f1f1;
-}
-
-
-.dropdown:hover .dropdown-content {
-    display: block;
-} */
