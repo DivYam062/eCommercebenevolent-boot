@@ -83,6 +83,7 @@ Links to privacy policy, terms of service, and customer support.
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/d4973871-b9a8-45cb-b095-e10cb0e340d0)
 
 **Signup Login Page**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/dccacfc7-fd92-4034-b535-5bab6d265e7f)
 
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/25febcc0-7be9-4afe-b77b-0b59181d6c7c)
@@ -94,7 +95,7 @@ Links to privacy policy, terms of service, and customer support.
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/9176c29c-1c90-4a1f-bcbe-92449187ad4a)
 
 **Cart Page**
-![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/3eb4bd7b-3fba-4334-84d6-1297615d8d01)
+
 
 **Address Page**
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/55540572-3336-486c-b540-1aca41e8398b)
