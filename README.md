@@ -12,10 +12,11 @@ The main objective of our project was to make practical use of all the coding sk
 This is a collaborative project built by a team of four members in a span of six days.
 
 ## Tech Stack 💻
-HTML5
-CSS3
-JAVASCRIPT 
-REACT
-JSON-SERVER 
-API
+
+Frontend Technology Stack:
+
+HTML, CSS, JavaScript
+React.js (or another frontend framework of choice)
+Chakra UI (based on your provided code)
+Responsive design for mobile and desktop views
 
