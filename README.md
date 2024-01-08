@@ -24,50 +24,62 @@ Responsive design for mobile and desktop views
 
 
 ## Key Features:
+1. User Authentication:
 
-User Authentication and Account Management:
+Registration, login, and password recovery.
+2. Homepage:
 
-Users can register and log in securely to manage their accounts.
-Password recovery options for forgotten passwords.
-Product Catalog:
+Featured products carousel.
+Top categories section.
+3. Product Catalog:
 
-A well-organized product catalog with categories and subcategories.
-Each product displays details such as images, descriptions, prices, and availability.
-Shopping Cart:
+Category and product pages.
+4. Shopping Cart:
 
-Users can add products to their shopping cart for later purchase.
-The cart displays a summary of selected items, and users can modify quantities or remove products.
-Checkout Process:
+Add, view, and modify items.
+Remove items from the cart.
+5. Checkout Process:
 
-A streamlined and secure checkout process.
-Users provide shipping information and select payment options.
-Payment Gateway Integration:
+Shipping information and payment selection.
+6. Payment Integration:
 
-Integration with a secure payment gateway for processing transactions.
-Support for various payment methods, including credit/debit cards and online wallets.
-Order Confirmation and Tracking:
+Integration with a test payment gateway.
+7. Order Confirmation:
 
-Users receive confirmation emails after successful orders.
-Order tracking functionality to monitor the status of shipments.
-User Reviews and Ratings:
+Display confirmation message.
+Send confirmation email.
+8. Responsive Design:
 
-Users can leave reviews and ratings for products they have purchased.
-Responsive Design:
+Mobile, tablet, and desktop views.
+9. Search Functionality:
 
-Ensures a consistent and user-friendly experience across various devices and screen sizes.
-Search Functionality:
+Implement search bar with live suggestions.
+10. User Reviews and Ratings:
+- Allow users to leave reviews and ratings.
 
-A search bar to help users find products quickly based on keywords.
-Admin Panel:
+11. Admin Panel:
+- Admin login and basic analytics.
+- Product management interface.
 
-An admin dashboard to manage products, user accounts, and orders.
-Ability to add, edit, or remove products from the catalog.
-Security Measures:
+12. Footer:
+- Links to privacy policy, terms, and customer support.
 
-Implementation of security best practices to protect user data and transactions.
-Footer with Additional Information:
+13. Loading and Error Handling:
+- Implement loading spinners.
+- Show appropriate error messages.
 
-Links to privacy policy, terms of service, and customer support.
+14. Security Measures:
+- Use HTTPS for secure communication.
+- Implement data validation and sanitization.
+
+15. Additional Features:
+- Social media sharing buttons.
+- Wishlist functionality.
+
+
+
+
+
 
 
 ## Snap Shots 📷
@@ -95,6 +107,7 @@ Links to privacy policy, terms of service, and customer support.
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/9176c29c-1c90-4a1f-bcbe-92449187ad4a)
 
 **Cart Page**
+![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/ef1c106a-8463-4e63-b2e2-1508eee75212)
 
 
 **Address Page**
