@@ -8,6 +8,10 @@ ShopKart is a full-fledged e-commerce website designed to provide users with a s
 ## Objective
 The main objective of our project was to make practical use of all the coding skills that we learned in Masai School to build the Project.
 
+## Deployed Link
+
+https://e-commercebenevolent-boot.vercel.app/
+
 ## Group-Project
 This is a collaborative project built by a team of four members in a span of six days.
 
