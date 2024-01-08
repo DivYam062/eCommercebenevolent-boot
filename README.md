@@ -31,18 +31,18 @@ Responsive design for mobile and desktop views
 -Featured products carousel.
 Top categories section.
 3. Product Catalog:
-
 -Category and product pages.
-4. Shopping Cart:
 
+4. Shopping Cart:
 -Add, view, and modify items.
 -Remove items from the cart.
+
 5. Checkout Process:
-
 -Shipping information and payment selection.
-6. Payment Integration:
 
+6. Payment Integration:
 Integration with a test payment gateway.
+
 7. Order Confirmation:
 
 Display confirmation message.
