@@ -1,13 +1,20 @@
-import React, { useState, useEffect, useMemo, memo } from 'react';
+import React, { useState, useEffect, useMemo, memo, useCallback } from 'react';
 import { Box, Heading, Text, Image, VStack, HStack, Button, Spacer, StackDivider, Container } from '@chakra-ui/react';
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useRazorpay from 'react-razorpay';
+
 
 export const Cart = () => {
   //const [isLargerThan450px] = useMediaQuery('(min-width: 450px)');
   //const stripePromise = loadStripe('pk_test_51NwhZLSG2DdjK2iecru6SmXEg4hif3HaKsAwcUHwZELTMpLM3cWcMQUzckaFuoVre8oi65WO7pEIco6EsoPm9Gum008dHzgXiF'); // Replace with your Stripe Publishable Key
 
+
+  const [Razorpay, isLoaded] = useRazorpay();
+  // const [showThankYou, setShowThankYou] = useState(false);
+  const navigate = useNavigate();
+  
   let { isAuth, userSuccessData } = useSelector((store) => {
     return {
       isAuth: store.loginReducer.isAuth,
@@ -52,8 +59,41 @@ export const Cart = () => {
     axios.patch(`https://shopkart-payload.onrender.com/userdata/${isAuth}`, { cart: updatedCart })
 
   };
+  
+  const totall= calculateTotalPrice()?.toFixed(2);
+  const handlePaymentrzp = useCallback(() => {
+    const options = {
+      key: "rzp_test_yswl3N40ETtM35", 
+      amount: totall*100,
+      currency: "INR",// change to INR
+      name: "Shopcart",
+      description: "Test Transaction",
+      // image: logo, 
+      // order_id: 1, 
+      handler: (res) => {
+        // setShowThankYou(true);
 
-  let navigate = useNavigate()
+        setTimeout(() => {
+          // setShowThankYou(false);
+          navigate("/");
+        }, 1000); 
+      },
+      prefill: {
+        name: "Animesh singh",
+        email: "animeshsingrol@example.com",
+        contact: "9170344125",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    const rzpay = new Razorpay(options);
+    rzpay.open();
+  }, [Razorpay]);
 
   const makePayment = () => {
     navigate("/payment")
@@ -126,7 +166,7 @@ export const Cart = () => {
         mt={4}
         size="lg"
         width="100%"
-        onClick={makePayment}
+        onClick={handlePaymentrzp}
       >
         Proceed to Payment
       </Button>
