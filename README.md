@@ -26,34 +26,34 @@ Responsive design for mobile and desktop views
 ## Key Features:
 1. User Authentication:
 
-Registration, login, and password recovery.
+-Registration, login, and password recovery.
 2. Homepage:
 
-Featured products carousel.
+-Featured products carousel.
 Top categories section.
 3. Product Catalog:
 
-Category and product pages.
+-Category and product pages.
 4. Shopping Cart:
 
-Add, view, and modify items.
-Remove items from the cart.
+-Add, view, and modify items.
+-Remove items from the cart.
 5. Checkout Process:
 
-Shipping information and payment selection.
+-Shipping information and payment selection.
 6. Payment Integration:
 
 Integration with a test payment gateway.
 7. Order Confirmation:
 
 Display confirmation message.
-Send confirmation email.
+-Send confirmation email.
 8. Responsive Design:
 
-Mobile, tablet, and desktop views.
+-Mobile, tablet, and desktop views.
 9. Search Functionality:
 
-Implement search bar with live suggestions.
+-Implement search bar with live suggestions.
 10. User Reviews and Ratings:
 - Allow users to leave reviews and ratings.
 
