@@ -44,15 +44,17 @@ Top categories section.
 Integration with a test payment gateway.
 
 7. Order Confirmation:
-
 Display confirmation message.
 -Send confirmation email.
+
 8. Responsive Design:
 
 -Mobile, tablet, and desktop views.
+
 9. Search Functionality:
 
 -Implement search bar with live suggestions.
+
 10. User Reviews and Ratings:
 - Allow users to leave reviews and ratings.
 
