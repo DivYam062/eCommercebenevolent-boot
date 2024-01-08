@@ -10,9 +10,11 @@ const Home = ()=>{
     let dispatch = useDispatch();
     let products = useSelector((store)=>store.HomeReducer.product);
     let loading = useSelector((store)=>store.HomeReducer.loading);
+    console.log(products)
 
     useEffect(() => {
         datafetch(dispatch);
+        
     }, [])
     
     

@@ -38,7 +38,7 @@ const Navbar = () => {
                         <div className="dropdown-content">
                             <h3>Popular Categories</h3>
                             <div className="dropdownInner">
-                            <Link to="/products/furniture" className="a">
+                            <Link to="/product" className="a">
                                 <div className="dropdownDiv">
                                     <img src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63ec6052dc39b839500c1f8a_Rectangle%201436.png" alt="" /> Furniture
                                 </div>

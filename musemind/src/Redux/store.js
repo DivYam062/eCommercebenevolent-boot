@@ -1,5 +1,23 @@
-import { legacy_createStore,combineReducers } from "redux";
+import {thunk} from "redux-thunk";
+import { loginReducer } from "../Pages/Login/LoginReducer"
 import { HomeReducer } from "./homeReducer/reducer";
 
-export const rootreducer = combineReducers({HomeReducer});
-export const store = legacy_createStore(rootreducer);
+import { reducer as productReducer } from '../Pages/Products/ProductReducer/reducer';
+
+import { combineReducers } from 'redux';
+
+import { applyMiddleware } from 'redux';
+import { legacy_createStore  } from 'redux';
+// const { legacy_createStore } = require("redux");
+
+
+
+
+const rootReducer=combineReducers({
+    productReducer,
+    loginReducer,
+    HomeReducer
+    })
+
+
+export const store = legacy_createStore(rootReducer,applyMiddleware(thunk));
