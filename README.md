@@ -25,10 +25,9 @@ Responsive design for mobile and desktop views
 
 ## Key Features:
 1. User Authentication:
-
 -Registration, login, and password recovery.
-2. Homepage:
 
+2. Homepage:
 -Featured products carousel.
 Top categories section.
 3. Product Catalog:
