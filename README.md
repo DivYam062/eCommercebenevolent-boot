@@ -1,21 +1,21 @@
-## Shopcart
+## Shopcart:
 
 ShopKart is a full-fledged e-commerce website designed to provide users with a seamless and intuitive online shopping experience. The website encompasses a wide range of products across various categories, ensuring that users can find and purchase items of their choice. The platform prioritizes user-friendly navigation, a visually appealing interface, and secure payment options to enhance customer satisfaction.
 
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/2d15a883-8b34-4c95-947b-36c236b204de)
 
 
-## Objective
+## Objective:
 The main objective of our project was to make practical use of all the coding skills that we learned in Masai School to build the Project.
 
-## Deployed Link
+## Deployed Link:
 
 https://e-commercebenevolent-boot.vercel.app/
 
-## Group-Project
+## Group-Project:
 This is a collaborative project built by a team of four members in a span of six days.
 
-## Tech Stack 💻
+## Tech Stack 💻:
 
 HTML, CSS, JavaScript
 
@@ -87,7 +87,7 @@ Display confirmation message.
 
 
 
-## Snap Shots 📷
+## Snap Shots 📷:
 
 **Home Page**
 
@@ -123,7 +123,7 @@ Display confirmation message.
 
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/55540572-3336-486c-b540-1aca41e8398b)
 
-## Contributors  😇
+## Contributors  😇:
 
 - 👤 [Animesh Singh](https://www.github.com/Animesh-2)
 - 👤 [Abhay Khare](https://github.com/ABHAY-22)
@@ -131,7 +131,7 @@ Display confirmation message.
 - 👤 [Zaheen Khan](https://github.com/Zaheen04)
 
 
-# Conclusion
+# Conclusion:
 The rapid creation of this website in a mere five days by a dedicated team of four members underscores their exceptional teamwork and project management skills. It exemplifies their ability to execute tasks efficiently and deliver high-quality results within tight deadlines.
 
 
