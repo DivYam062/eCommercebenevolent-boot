@@ -92,6 +92,7 @@ Display confirmation message.
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/65e02c1b-7605-4729-af8d-3f8479e53365)
 
 **Footer**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/d4973871-b9a8-45cb-b095-e10cb0e340d0)
 
 **Signup Login Page**
@@ -101,16 +102,20 @@ Display confirmation message.
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/25febcc0-7be9-4afe-b77b-0b59181d6c7c)
 
 **Product Page**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/f365eeb5-f74b-4f36-bddc-00a9658d6858)
 
 **Product Details Page**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/9176c29c-1c90-4a1f-bcbe-92449187ad4a)
 
 **Cart Page**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/ef1c106a-8463-4e63-b2e2-1508eee75212)
 
 
 **Address Page**
+
 ![image](https://github.com/DivYam062/eCommercebenevolent-boot/assets/51116785/55540572-3336-486c-b540-1aca41e8398b)
 
 ## Contributors  😇
