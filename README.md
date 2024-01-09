@@ -19,9 +19,9 @@ This is a collaborative project built by a team of four members in a span of six
 
 HTML, CSS, JavaScript
 
-React.js (or another frontend framework of choice)
+React.js 
 
-Chakra UI (based on your provided code)
+Chakra UI 
 
 Responsive design for mobile and desktop views
 
