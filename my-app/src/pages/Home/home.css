@@ -1,0 +1,393 @@
+#banner {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-repeat: 'no-repeat';
+    height: 600px;
+    justify-content: center;
+
+}
+
+.category{
+   grid-template-columns: repeat(6,1fr);
+}
+
+.categoryHeading {
+    padding-top: 20px !important;
+    text-align: center;
+    color: white;
+    font-weight: 600 !important;
+    width: 190px;
+    height: 240px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+    background-size: 100%;
+    transition: background-size 0.3s ease-in-out !important;
+    cursor: pointer;
+    background-position: center;
+}
+
+
+.categoryHeading:hover {
+    background-position: center;
+    background-size: 120%;
+}
+
+.itemgrid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    overflow-x: auto;
+    gap: 20px;
+    scrollbar-width: none;
+    overflow-x: auto;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.itemgrid::-webkit-scrollbar {
+    scroll-behavior: smooth;
+}
+
+.itembox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: left;
+
+}
+
+
+#previcon {
+    left: 8%;
+}
+
+#nexticon {
+    right: 8%;
+}
+
+
+.icon {
+    position: absolute;
+    background-color: black;
+    color: white !important;
+    border-radius: 50%;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 10px;
+
+}
+
+#brandgrid {
+    width: 84%;
+    gap: 20px;
+    margin: auto;
+    
+    grid-template-columns: repeat(4, 1fr) ;
+
+}
+
+.branditem {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(245, 246, 246);
+    border: rgb(245, 246, 246) solid 1px;
+    transition: border 0.3s ease-in-out;
+}
+
+.branditem:hover {
+    border: grey solid 1px;
+}
+
+.branditem>img {
+    transition: transform 0.3s;
+}
+
+.branditem>img:hover {
+    transform: scale(1.1);
+}
+
+
+#discountgrid {
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin: auto;
+    gap: 20px;
+
+}
+
+.discountbox {
+    overflow: hidden;
+    box-sizing: border-box !important;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.discountimg {
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.discountimg:hover {
+    transform: scale(1.2);
+
+}
+
+
+#middlebanner {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-size: cover;
+}
+
+#middlebox {
+    box-sizing: border-box;
+    padding: 50px;
+    color: white;
+    overflow: hidden;
+    width: 500px;
+    height: 470px;
+    background-color: rgb(0, 61, 41);
+    margin: 100px;
+}
+
+
+
+.ware {
+    font-size: 40px;
+   
+}
+
+.ware2{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/* 4 grid item */
+
+
+#itemgrid2 {
+    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.itembox2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 450px;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.filterbtn {
+    font-weight: 600;
+    width: 100px;
+    border: gray solid 1px;
+    height: max-content;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.applyfilter {
+    background-color: rgb(0, 61, 41);
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    border: gray solid 1px;
+    height: max-content;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+.discountgrid2 {
+    grid-template-columns: repeat(4, 1fr);
+    width: 82%;
+    margin: auto;
+    gap: 20px;
+
+}
+
+.discountbox2 {
+
+    width: 400px;
+    overflow: hidden;
+    box-sizing: border-box !important;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+#paymentgrid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 85%;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#paymentgrid>div {
+    border-radius: 5px;
+    display: flex;
+    border: solid grey 1px;
+    width: 80px;
+    height: 30px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.listitem {
+    overflow: hidden;
+    margin-left: 0;
+    transition: margin-left 0.3s ease-out, color 0.3s ease-out;
+}
+
+.listitem:hover {
+    color: red;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.listbox {
+    width: 200px;
+
+}
+
+
+.description {
+    width: 90%;
+
+    margin-bottom: 20px;
+    height: 90px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .top{
+        font-size: small;
+    }
+    .top-category{
+        height: 600px;
+    }
+    .category{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #brandgrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #discountgrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #middlebox h1{
+        font-size: 40px;
+    }
+    .ware {
+        font-size: 40px;
+    }
+    #middlebox p{
+        font-size: 15px;
+    }
+    #middlebox button{
+        font-size: 15px;
+    }
+    #itemgrid2{
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services h1{
+        margin: 20px 25%;
+    }
+    .discountgrid2{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 25%;
+    }
+    .ware2{
+        font-size: 20px;
+    }
+    .footer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .banner-content{
+        top: 8%;
+        left: 5%;
+    }
+    .top-category{
+        height: 900px;
+    }
+    .category{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #brandgrid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #discountgrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+   
+    .ware {
+        font-size: 10px;
+       
+    }
+    #middlebox > Button{
+        display: none;
+    }
+    #itemgrid2{
+        margin-top: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .discountgrid2{
+        width: 90%;
+        margin: 10px;
+    }
+    .footer{
+        display: none;
+    }
+}
+
+
+
+
+
