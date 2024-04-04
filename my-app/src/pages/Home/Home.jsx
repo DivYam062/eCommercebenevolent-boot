@@ -174,7 +174,7 @@ export const Home = () => {
 
 
             <Box marginTop={"100px"}  >
-                <Heading fontSize={"3xl"} marginLeft={"9%"} marginBottom={"40px"}>Todays Best Deals for you!</Heading>
+                <Heading fontSize={"3xl"} marginLeft={"9%"} marginBottom={"40px"}>Todays Best Deals for you !</Heading>
                 <Grid className="itemgrid" ref={ref}>
                     <ChevronLeftIcon className="icon" id="previcon" onClick={handle} />
 
