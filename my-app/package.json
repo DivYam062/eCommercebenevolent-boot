@@ -6,10 +6,13 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
+<<<<<<< HEAD:musemind/package.json
+=======
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/open-sans": "^5.0.12",
     "@fontsource/raleway": "^5.0.8",
+>>>>>>> 8c5fa38d3c0d6794223674f943a3dbff0b997d0a:my-app/package.json
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
